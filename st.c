@@ -4011,9 +4011,9 @@ void
 usage(void) {
 	die("%s " VERSION " (c) 2010-2015 st engineers\n"
 	"usage: stterm [-a] [-v] [-c class] [-f font] [-g geometry] [-o file]\n"
-	"              [-i] [-t title] [-w windowid] [-e command ...] [command ...]\n"
+	"              [-i] [-T title] [-w windowid] [-e command ...] [command ...]\n"
 	"       stterm [-a] [-v] [-c class] [-f font] [-g geometry] [-o file]\n"
-	"              [-i] [-t title] [-w windowid] [-l line] [stty_args ...]\n",
+	"              [-i] [-T title] [-w windowid] [-l line] [stty_args ...]\n",
 	argv0);
 }
 
@@ -4052,7 +4052,7 @@ main(int argc, char *argv[]) {
 	case 'l':
 		opt_line = EARGF(usage());
 		break;
-	case 't':
+	case 'T':
 		opt_title = EARGF(usage());
 		break;
 	case 'w':
